@@ -1,0 +1,20 @@
+RSVP for Ceremony and Reception
+    - Send out printed invitations with invite codes (different for each event).
+    - People RSVP on the site OR call us (we manually enter data in latter case).
+        
+Get signup code (ceremonies & reception OR reception only)
+Create account on site
+    - Name
+    - Phone
+    - Email Address OR Home Address
+    - Number of guests and whether they're an adult/child
+    - Checkboxes for attendance of each event (based on invite code)
+
+Guest Book
+    - Name
+    - Picture
+    - Where are you from 
+    - How do you know the bride and groom?
+    - Your message/wishes
+
+Engagement Photos/Album

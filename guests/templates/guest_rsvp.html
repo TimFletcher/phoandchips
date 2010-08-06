@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load form_helpers %}
+
+{# {% block extra_js %}<script src="{{ MEDIA_URL }}js/jquery.forms.js" type="text/javascript" charset="utf-8"></script>{% endblock %} #}
+
+{% block primary %}
+
+{% block content %}
+    <form action="" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="section">
+            <label for="{{ form.attending_ceremony.auto_id }}" class="input {{ classes }}">{{ form.attending_ceremony.label }}:</label>
+            <div class="column align-left{% if form.attending_ceremony.errors %} error{% endif %}">
+                {{ form.attending_ceremony }}
+                {{ form.attending_ceremony.errors }}
+            </div>
+            <label for="{{ form.attending_reception.auto_id }}" class="input {{ classes }}">{{ form.attending_reception.label }}:</label>
+            <div class="column align-left{% if form.attending_reception.errors %} error{% endif %}">
+                {{ form.attending_reception }}
+                {{ form.attending_reception.errors }}
+            </div>
+            <label for="{{ form.number_of_extra_adults.auto_id }}" class="input {{ classes }}">{{ form.number_of_extra_adults.label }}:</label>
+            <div class="column align-left{% if form.number_of_extra_adults.errors %} error{% endif %}">
+                {{ form.number_of_extra_adults }}
+                {{ form.number_of_extra_adults.errors }}
+                {{ form.number_of_extra_adults_type }}
+                {{ form.number_of_extra_adults_type.errors }}
+            </div>
+            <label for="{{ form.number_of_extra_children.auto_id }}" class="input {{ classes }}">{{ form.number_of_extra_children.label }}:</label>
+            <div class="column align-left{% if form.number_of_extra_children.errors %} error{% endif %}">
+                {{ form.number_of_extra_children }}
+                {{ form.number_of_extra_children.errors }}
+                {{ form.number_of_extra_children_type }}
+                {{ form.number_of_extra_children_type.errors }}
+            </div>
+        </div>
+        <button name="submit" id="submit" class="button" type="submit" value="Submit">Submit</button>
+    </form>    
+{% endblock %}
+
+{% endblock %}

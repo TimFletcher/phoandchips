@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% load form_helpers %}
+
+{# {% block extra_js %}<script src="{{ MEDIA_URL }}js/jquery.forms.js" type="text/javascript" charset="utf-8"></script>{% endblock %} #}
+
+{% block primary %}
+
+{% block content %}
+    <form action="" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="section">
+            <label for="{{ form.first_name.auto_id }}" class="input {{ classes }}">{{ form.first_name.label }}:</label>
+            <div class="column align-left{% if form.first_name.errors %} error{% endif %}">
+                {{ form.first_name }}
+                {{ form.first_name.errors }}
+            </div>
+            <label for="{{ form.last_name.auto_id }}" class="input {{ classes }}">{{ form.last_name.label }}:</label>
+            <div class="column align-left{% if form.last_name.errors %} error{% endif %}">
+                {{ form.last_name }}
+                {{ form.last_name.errors }}
+            </div>
+            <label for="{{ form.phone.auto_id }}" class="input {{ classes }}">{{ form.phone.label }}:</label>
+            <div class="column align-left{% if form.phone.errors %} error{% endif %}">
+                {{ form.phone }}
+                {{ form.phone.errors }}
+                {{ form.phone_type }}
+                {{ form.phone_type.errors }}
+            </div>
+            <label for="{{ form.address.auto_id }}" class="input {{ classes }}">{{ form.address.label }}:</label>
+            <div class="column align-left{% if form.address.errors %} error{% endif %}">
+                {{ form.address }}
+                {{ form.address.errors }}
+            </div>
+            <label for="{{ form.invite_code.auto_id }}" class="input {{ classes }}">{{ form.invite_code.label }}:</label>
+            <div class="column align-left{% if form.invite_code.errors %} error{% endif %}">
+                {{ form.invite_code }}
+                {{ form.invite_code.errors }}
+            </div>
+        </div>
+
+        {# <div class="section"> #}
+        {#     <p class="section-label">Phone</p> #}
+        {#     <div class="column phone"> #}
+        {#         {{ form.phone_type|render_field }} #}
+        {#         <img src="{{ MEDIA_URL }}img/add.png" width="28" height="28"> #}
+        {#         {{ form.cell_phone|render_field }} #}
+        {#     </div> #}
+        {# </div> #}
+        {# <div class="section"> #}
+        {#     <p class="section-label">Email</p> #}
+        {#     <div class="full-column{% if form.email.errors %} error{% endif %}"> #}
+        {#         {{ form.email|render_field }} #}
+        {#     </div> #}
+        {# </div> #}
+        {# <div class="section"> #}
+        {#     <div class="column column-select{% if form.country.errors %} error{% endif %}"> #}
+        {#         {{ form.country|render_field }} #}
+        {#     </div> #}
+        {# </div> #}
+        {# <div class="section"> #}
+        {#     <p class="section-label">Profile Picture</p> #}
+        {#     <div class="column-file{% if form.profile_picture.errors %} error{% endif %}"> #}
+        {#         {{ form.profile_picture|render_field }} #}
+        {#     </div> #}
+        {# </div> #}
+        {# <div class="section"> #}
+        {#     <p class="section-label">Song</p> #}
+        {#     <div class="column-file{% if form.song.errors %} error{% endif %}"> #}
+        {#         {{ form.song|render_field }} #}
+        {#     </div> #}
+        {# </div> #}
+        <button name="submit" id="submit" class="button" type="submit" value="Submit">Submit</button>
+    </form>    
+{% endblock %}
+
+{% endblock %}

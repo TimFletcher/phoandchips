@@ -1,0 +1,43 @@
+body                        {font-family: Helvetica, sans-serif; font-size: 14px; padding: 20px;}
+
+
+/*.input {
+  display: block;
+  width: 100%;
+}*/
+
+.input span {
+  position: absolute;
+  padding: 7px;
+  margin-left: 0px;
+  color: #999;
+  z-index: 1;
+  cursor: text;
+}
+input, textarea, .input textarea, input.fakeinput{
+  z-index: 0;
+  padding: 6px 9px 7px 4px;
+  margin: 0;
+  font: inherit;
+  border: 1px solid #ABB5CD;
+  -webkit-border-radius: 3px;
+}
+
+
+#container                  {}
+#primary                    {width: 500px; background-color: #E9EDFB; padding: 20px; -webkit-border-radius: 6px;}
+textarea                    {height: 100px;}
+.column                     {float: left; background-color: #DBE3F2; padding: 5px; margin-bottom: 7px; -webkit-border-radius: 6px; position: relative;}
+.column input               {width: 200px;}
+label                       {display: inline-block; width: 100px; float: left; text-align: right; padding: 12px 30px 0 0; font-weight: bold; clear: left;}
+.full-column                {background-color: #DBE3F2; padding: 5px; margin-bottom: 5px; -webkit-border-radius: 6px; clear: both;}
+.full-column input          {width: 435px;}
+.column-select              {padding: 4px;}
+.column-file                {background-color: #DBE3F2; padding: 5px; margin-bottom: 5px; -webkit-border-radius: 6px;}
+.align-left                 {float: left;}
+.align-right                {float: right;}
+.section                    {margin-bottom: 5px; overflow: hidden;}
+.section-label              {clear: both; padding: 0 0 3px 5px;}
+#submit                     {background-color: #A6B6CD; border: none; text-transform: uppercase; color: #FFFFFF; font-size: 12px; font-weight: bold; padding: 8px 11px;  -webkit-border-radius: 3px; margin-left: 135px;}
+.error                      {background-color: #FCC;}
+.errorlist                  {font-size: 12px; margin-top: 4px; font-weight: bold;}
