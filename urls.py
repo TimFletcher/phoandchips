@@ -4,18 +4,15 @@ import settings
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Example:
     (r'^guests/', include('guests.urls')),
-
-    # Uncomment the next line to enable the admin:
-    (r'^admin/', include(admin.site.urls)),
+    (r'^guestbook/', include('guestbook.urls')),
+    (r'^admin/', include(admin.site.urls))
 )
 
 # Serve static files for local dev only
 try:
     import local_settings as settings
     if settings.DEBUG:
-        print 'urls'
         urlpatterns += patterns('',
             (r'^media/(?P<path>.*)$', 'django.views.static.serve',{'document_root': settings.MEDIA_ROOT}),
         )

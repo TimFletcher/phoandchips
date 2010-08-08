@@ -2,10 +2,15 @@
 
 {% load form_helpers %}
 
-{# {% block extra_js %}<script src="{{ MEDIA_URL }}js/jquery.forms.js" type="text/javascript" charset="utf-8"></script>{% endblock %} #}
-
 {% block primary %}
 
-THANKS!
-
+    {# can I do this in one line? #}
+    {% ifequal request.session.guest.attending_ceremony 'N' %}
+        {% ifequal request.session.guest.attending_reception 'N' %}
+            <p>Sorry to hear you're not able to attend. We understand completely!</p>
+            <p>We'd really like it if you could sign our guest book though. Please!</p>
+        {% else %}
+            <p>Great! We can't wait to see you there!</p>
+        {% endifequal %}
+    {% endifequal %}
 {% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% load form_helpers %}
+
+{% block primary %}
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% block content %}
+        {% for entry in entry_list %}
+            {{ entry.text|safe }}
+            <h2>{{ entry.author }}</h2>
+        {% empty %}
+            <p>No entries just yet!</p>
+        {% endfor %}
+    {% endblock %}
+    <h2>Add Your Own Message</h2>
+    <form action="" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="section">
+            <label for="{{ form.author.auto_id }}" class="input {{ classes }}">{{ form.author.label }}:</label>
+            <div class="column align-left{% if form.author.errors %} error{% endif %}">
+                {{ form.author }}
+                {{ form.author.errors }}
+            </div>
+            <label for="{{ form.text.auto_id }}" class="input {{ classes }}">{{ form.text.label }}:</label>
+            <div class="column align-left{% if form.text.errors %} error{% endif %}">
+                {{ form.text }}
+                {{ form.text.errors }}
+            </div>
+            <label for="{{ form.invite_code.auto_id }}" class="input {{ classes }}">{{ form.invite_code.label }}:</label>
+            <div class="column align-left{% if form.invite_code.errors %} error{% endif %}">
+                {{ form.invite_code }}
+                {{ form.invite_code.errors }}
+            </div>
+        </div>
+        <button name="submit" id="submit" class="button" type="submit" value="Submit">Submit</button>
+    </form>
+{% endblock %}

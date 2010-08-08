@@ -106,6 +106,7 @@ INSTALLED_APPS = [
     'django.contrib.flatpages',
     'django.contrib.admin',
     'django.contrib.markup',
+    'form_helpers',
     'guests',
-    'form_helpers'
+    'guestbook'
 ]

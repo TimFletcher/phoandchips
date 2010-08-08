@@ -41,13 +41,9 @@ def rsvp(request):
         field_list.append('attending_ceremony')
     RSVPForm = get_rsvp_form(field_list)
     form = context['form'] = RSVPForm(request.POST or None, instance=guest)
-    
-    import logging
-    logging.debug(form.is_valid())
-    
     if form.is_valid():
         form.save()
-        request.session['guest'] = None
+        request.session['guest'] = guest
         return HttpResponseRedirect(reverse('guests_thanks'))
 
     return render_to_response(

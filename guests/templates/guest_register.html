@@ -20,12 +20,15 @@
                 {{ form.last_name }}
                 {{ form.last_name.errors }}
             </div>
+            <label for="{{ form.email.auto_id }}" class="input {{ classes }}">{{ form.email.label }}:</label>
+            <div class="column align-left{% if form.email.errors %} error{% endif %}">
+                {{ form.email }}
+                {{ form.email.errors }}
+            </div>
             <label for="{{ form.phone.auto_id }}" class="input {{ classes }}">{{ form.phone.label }}:</label>
             <div class="column align-left{% if form.phone.errors %} error{% endif %}">
                 {{ form.phone }}
                 {{ form.phone.errors }}
-                {{ form.phone_type }}
-                {{ form.phone_type.errors }}
             </div>
             <label for="{{ form.address.auto_id }}" class="input {{ classes }}">{{ form.address.label }}:</label>
             <div class="column align-left{% if form.address.errors %} error{% endif %}">
@@ -71,7 +74,7 @@
         {#     </div> #}
         {# </div> #}
         <button name="submit" id="submit" class="button" type="submit" value="Submit">Submit</button>
-    </form>    
+    </form> 
 {% endblock %}
 
 {% endblock %}
