@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+{% load flatpages %}<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
  
 <html lang="en"> 
 <head> 
@@ -29,28 +29,34 @@
 <body> 
 <!--[if IE]><p style="color: red; text-align: center; margin-top: 10px">You're using Internet Explorer. This website uses technologies that Internet Explorer does not support but pretty much every other browser does support. Do yourself and the Internet a favour and install a better browser.</p><![endif]--> 
 <div id="container"> 
-    <div id="header"> 
-        <ul id="menu"> 
-            <li><a id="current" href="/">Home</a></li> 
-            <li>
-                About The...
-                <ul>
-                    <li><a{% block tea_ceremony %} id="current"{% endblock %} href="/info/tea-ceremony/">Tea Ceremony</a></li>
-                    <li><a{% block reception %} id="current"{% endblock %} href="/info/reception/">Reception</a></li>
-                </ul>
-            </li>
-            <li><a{% block register %} id="current"{% endblock %} href="/guests/register/">RSVP</a></li>
-            <li><a{% block guestbook %} id="current"{% endblock %} href="/guestbook/">Guestbook</a></li>
-            <li><a{% block contact %} id="current"{% endblock %} href="/contact/">Contact</a></li>
-        </ul> 
-    </div> 
-	<div id="primary">
-	    {% block primary %}
-	    {% endblock %}
+    <div id="primary">
+        {% block primary %}
+        {% endblock %}
     </div>
     <div id="secondary">
-        {% block secondary %}
-        {% endblock %}
+        <div id="logo">
+            <h1>Pho &amp; Chips</h1>
+            <span class="tagline">The wedding of Tim and Mai-Linh</span>
+        </div>
+        <ul id="nav">
+            {# <li>{% ifequal request.META.PATH_INFO '/' %}<span>Home</span>{% else %}<a href="{% url homepage %}">Home</a>{% endifequal %}</li> #}
+            {# {% get_flatpages '/info/' as info_pages %} #}
+            {# <ul> #}
+            {#     {% for info_page in info_pages %} #}
+            {#         <li> #}
+            {#             {% ifequal flatpage.url info_page.url %} #}
+            {#                 <span>{{ info_page.title }}</span> #}
+            {#             {% else %} #}
+            {#                 <a href="{{ info_page.url }}">{{ info_page.title }}</a> #}
+            {#             {% endifequal %} #}
+            {#         </li> #}
+            {#     {% endfor %} #}
+            {# </ul> #}
+            {# <li>{% ifequal request.META.PATH_INFO '/guests/register/' %}<span>RSVP</span>{% else %}<a href="{% url guests_register %}">RSVP</a>{% endifequal %}</li> #}
+            {# <li>{% ifequal request.META.PATH_INFO '/guestbook/' %}<span>Guestbook</span>{% else %}<a href="{% url guestbook_guestbook %}">Guestbook</a>{% endifequal %}</li> #}
+            {# <li>{% ifequal flatpage.url '/contact/' %}<span>Contact</span>{% else %}<a href="/contact/">Contact</a>{% endifequal %}</li> #}
+        </ul>
+        {% block secondary %}{% endblock %}
     </div>
     <div class="clearingDiv"></div> 
 </div> 

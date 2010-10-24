@@ -1,24 +1,47 @@
-body                        {font-family: Helvetica, sans-serif; font-size: 14px; padding: 20px;}
 
-.input span {
-  position: absolute;
-  padding: 7px;
-  margin-left: 0px;
-  color: #999;
-  z-index: 1;
-  cursor: text;
-}
-input, textarea, .input textarea, input.fakeinput{
-  z-index: 0;
-  padding: 6px 9px 7px 4px;
-  margin: 0;
-  font: inherit;
-  border: 1px solid #ABB5CD;
-  -webkit-border-radius: 3px;
-}
 
-#container                      {}
-#primary                        {width: 500px; background-color: #E9EDFB; padding: 20px; -webkit-border-radius: 6px;}
+/*#47840A*/
+
+body                            {padding: 20px;}
+#container                      {width: 960px; overflow: hidden; margin: 30px auto 0 auto;}
+#primary                        {width: 654px; float: left; padding: 0px;}
+#secondary                      {width: 304px; float: right;}
+
+/* Global Typography */
+body                            {font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif; color: #494945;}
+a                               {text-decoration: none; color: #47840A;}
+a:hover                         {text-decoration: underline;}
+h1,h2,h3,h4,h5                  {color: #47840A; font-weight: normal;}
+
+/* Logo */
+#logo                           {padding: 0 0 0 10px; height: 95px;}
+#logo h1                        {font-family: "American Typewriter", monospace; font-size: 50px; line-height: 1em; margin: 0 0 -5px 0; font-weight: 500; color: #47840A;}
+#logo span                      {display: block; margin-bottom: 30px; font-size: 15px;/*font-style: italic;*/ color: #AAAAAA;}
+
+/* Navigation */
+#nav                            {/*color: #47840A; */width: 274px; height: 281px; padding: 20px 0 10px 30px; display: block; /*background-color: #ddd;*/}
+#nav ul                         {margin: 0 0 1em 1em;}
+#nav li                         {margin: 0 0 1em 0;}
+#nav a                          {color: #47840A;}
+#nav span                       {background-color: #60b30e; color: #000000; padding: 3px 7px;
+                                    -webkit-border-radius: 6px;
+		                            background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #7ae311), color-stop(1.0, #60b30e)) !important;
+                                    text-shadow: rgba(255,255,255,.2) 0 1px 0;
+                                }
+/* Homepage */
+#home-news                      {padding: 0px 10px 20px 20px; height: 168px;}
+#home-news h2                   {border-top: 1px solid #DDDDDD; padding: 3px 0 10px 0px; text-transform: uppercase;}
+#home-news h3                   {font-weight: bold;}
+#home-news .meta                {color: #AAAAAA; font-size: 11px; line-height: 18px;}
+
+/* Images */
+.photo                          {margin: 2px; background-color: #FFFFFF; border: 1px solid #CCCCCC; display: block;}
+.size1                          {height: 400px; width: 648px; margin-top: 0;}
+.size2                          {height: 198px; width: 320px;}
+.size3                          {height: 96px; width: 158px;}
+.inline                         {float: left;}
+
+/* Forms */
 textarea                        {height: 100px;}
 .column                         {float: left; background-color: #DBE3F2; padding: 5px; margin-bottom: 7px; -webkit-border-radius: 6px; position: relative;}
 .column input[type='text']      {width: 200px;}
@@ -40,3 +63,20 @@ label                           {display: inline-block; width: 100px; float: lef
 .error                          {background-color: #FCC;}
 .errorlist                      {font-size: 12px; margin-top: 4px; font-weight: bold;}
 .errorlist li                   {width: 100%;}
+
+.input span {
+  position: absolute;
+  padding: 7px;
+  margin-left: 0px;
+  color: #999;
+  z-index: 1;
+  cursor: text;
+}
+input, textarea, .input textarea, input.fakeinput{
+  z-index: 0;
+  padding: 6px 9px 7px 4px;
+  margin: 0;
+  font: inherit;
+  border: 1px solid #ABB5CD;
+  -webkit-border-radius: 3px;
+}

@@ -3,11 +3,6 @@
 {% load form_helpers %}
 
 {% block primary %}
-  
-  -->{{ guest }}
-  -->{{ guest.attending_ceremony }}
-  -->{{ guest.attending_reception }}
-
     {% if not guest.attending_ceremony and not guest.attending_reception %}
           <p>Sorry to hear you're not able to attend. We understand completely!</p>
           <p>We'd really like it if you could sign our guest book though. Please!</p>

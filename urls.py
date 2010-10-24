@@ -1,9 +1,11 @@
 from django.conf.urls.defaults import *
 from django.contrib import admin
+from django.views.generic.simple import direct_to_template
 import settings
 admin.autodiscover()
 
 urlpatterns = patterns('',
+    url(r'^$', direct_to_template, {'template': 'homepage.html'}, name="homepage"),
     (r'^guests/', include('guests.urls')),
     (r'^guestbook/', include('guestbook.urls')),
     (r'^admin/', include(admin.site.urls))
