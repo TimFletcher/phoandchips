@@ -1,11 +1,5 @@
 body                        {font-family: Helvetica, sans-serif; font-size: 14px; padding: 20px;}
 
-
-/*.input {
-  display: block;
-  width: 100%;
-}*/
-
 .input span {
   position: absolute;
   padding: 7px;
@@ -22,7 +16,6 @@ input, textarea, .input textarea, input.fakeinput{
   border: 1px solid #ABB5CD;
   -webkit-border-radius: 3px;
 }
-
 
 #container                      {}
 #primary                        {width: 500px; background-color: #E9EDFB; padding: 20px; -webkit-border-radius: 6px;}

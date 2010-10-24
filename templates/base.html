@@ -35,11 +35,13 @@
             <li>
                 About The...
                 <ul>
-                    <li><a id="" href="/info/tea-ceremony/">Tea Ceremony</a></li>
-                    <li><a id="" href="/info/reception/">Reception</a></li>
+                    <li><a{% block tea_ceremony %} id="current"{% endblock %} href="/info/tea-ceremony/">Tea Ceremony</a></li>
+                    <li><a{% block reception %} id="current"{% endblock %} href="/info/reception/">Reception</a></li>
                 </ul>
             </li>
-            <li><a id="" href="/contact/">Contact</a></li> 
+            <li><a{% block register %} id="current"{% endblock %} href="/guests/register/">RSVP</a></li>
+            <li><a{% block guestbook %} id="current"{% endblock %} href="/guestbook/">Guestbook</a></li>
+            <li><a{% block contact %} id="current"{% endblock %} href="/contact/">Contact</a></li>
         </ul> 
     </div> 
 	<div id="primary">

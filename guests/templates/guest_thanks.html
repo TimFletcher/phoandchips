@@ -3,14 +3,15 @@
 {% load form_helpers %}
 
 {% block primary %}
+  
+  -->{{ guest }}
+  -->{{ guest.attending_ceremony }}
+  -->{{ guest.attending_reception }}
 
-    {# can I do this in one line? #}
-    {% ifequal request.session.guest.attending_ceremony 'N' %}
-        {% ifequal request.session.guest.attending_reception 'N' %}
-            <p>Sorry to hear you're not able to attend. We understand completely!</p>
-            <p>We'd really like it if you could sign our guest book though. Please!</p>
-        {% else %}
-            <p>Great! We can't wait to see you there!</p>
-        {% endifequal %}
-    {% endifequal %}
+    {% if not guest.attending_ceremony and not guest.attending_reception %}
+          <p>Sorry to hear you're not able to attend. We understand completely!</p>
+          <p>We'd really like it if you could sign our guest book though. Please!</p>
+    {% else %}
+          <p>Great! We can't wait to see you there!</p>
+    {% endif %}
 {% endblock %}

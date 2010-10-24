@@ -6,6 +6,7 @@
 
 {% block primary %}
     {% block content %}
+        <p>Hey {{ guest.first_name }}, just a couple more things..</p>
         <form action="" method="post" accept-charset="utf-8" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="section">
@@ -20,15 +21,15 @@
                 <div class="column align-left{% if form.attending_reception.errors %} error{% endif %}">
                     {{ form.attending_reception|render_field:"forms/RadioField.html" }}
                 </div>
-                <label for="{{ form.number_of_extra_adults.auto_id }}" class="input {{ classes }}">{{ form.number_of_extra_adults.label }}:</label>
-                <div class="column align-left{% if form.number_of_extra_adults.errors %} error{% endif %}">
-                    {{ form.number_of_extra_adults }}
-                    {{ form.number_of_extra_adults.errors }}
+                <label for="{{ form.number_of_adults.auto_id }}" class="input {{ classes }}">{{ form.number_of_adults.label }}:</label>
+                <div class="column align-left{% if form.number_of_adults.errors %} error{% endif %}">
+                    {{ form.number_of_adults }}
+                    {{ form.number_of_adults.errors }}
                 </div>
-                <label for="{{ form.number_of_extra_children.auto_id }}" class="input {{ classes }}">{{ form.number_of_extra_children.label }}:</label>
-                <div class="column align-left{% if form.number_of_extra_children.errors %} error{% endif %}">
-                    {{ form.number_of_extra_children }}
-                    {{ form.number_of_extra_children.errors }}
+                <label for="{{ form.number_of_children.auto_id }}" class="input {{ classes }}">{{ form.number_of_children.label }}:</label>
+                <div class="column align-left{% if form.number_of_children.errors %} error{% endif %}">
+                    {{ form.number_of_children }}
+                    {{ form.number_of_children.errors }}
                 </div>
             </div>
             <button name="submit" id="submit" class="button" type="submit" value="Submit">Submit</button>
