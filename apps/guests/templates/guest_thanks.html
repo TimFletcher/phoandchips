@@ -2,6 +2,8 @@
 
 {% load form_helpers %}
 
+{% block page_class %}{% endblock %}
+
 {% block primary %}
     {% if not guest.attending_ceremony and not guest.attending_reception %}
           <p>Sorry to hear you're not able to attend. We understand completely!</p>

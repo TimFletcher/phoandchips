@@ -8,6 +8,7 @@ urlpatterns = patterns('',
     url(r'^$', direct_to_template, {'template': 'homepage.html'}, name="homepage"),
     (r'^guests/', include('guests.urls')),
     (r'^guestbook/', include('guestbook.urls')),
+    (r'^news/', include('loft.urls')),
     (r'^admin/', include(admin.site.urls))
 )
 

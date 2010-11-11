@@ -2,24 +2,11 @@
 
 {% load form_helpers %}
 
+{% block page_class %}{% endblock %}
+
 {% block primary %}
-    {% if messages %}
-        <ul class="messages">
-            {% for message in messages %}
-                <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}
-    {% block content %}
-        {% for entry in entry_list %}
-            {{ entry.text|safe }}
-            <h2>{{ entry.author }}</h2>
-        {% empty %}
-            <p>No entries just yet!</p>
-        {% endfor %}
-    {% endblock %}
-    <h2>Add Your Own Message</h2>
-    <form action="" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+    <h1>Add a Message to our Guestbook</h1>
+    <form id="guestbook-form" action="" method="post" accept-charset="utf-8" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="section">
             <label for="{{ form.author.auto_id }}" class="input {{ classes }}">{{ form.author.label }}:</label>
@@ -40,4 +27,23 @@
         </div>
         <button name="submit" id="submit" class="button" type="submit" value="Submit">Submit</button>
     </form>
+
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% block content %}
+        {% for entry in entry_list %}
+            <div class="guestbook-entry">
+                {{ entry.text|safe }}
+                <p class="author">-- {{ entry.author }}</p>
+            </div>
+        {% empty %}
+            <p>No entries just yet!</p>
+
+        {% endfor %}
+    {% endblock %}
 {% endblock %}

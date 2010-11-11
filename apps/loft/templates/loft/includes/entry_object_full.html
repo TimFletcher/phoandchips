@@ -1,0 +1,8 @@
+<div id="postContainer">
+    <h2>{{ object.title }}</h2>
+    <div class="post">
+        {{ object.body_html|safe }}
+    </div>
+    <p class="post-meta">{{ object.created|date:"jS F Y" }} &bull; {{ object.author }}</p>
+    <div class="clearingDiv"></div>
+</div>

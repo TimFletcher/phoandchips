@@ -2,10 +2,11 @@
 
 {% load form_helpers %}
 
-{# {% block extra_js %}<script src="{{ MEDIA_URL }}js/jquery.forms.js" type="text/javascript" charset="utf-8"></script>{% endblock %} #}
+{% block page_class %}{% endblock %}
 
 {% block primary %}
     {% block content %}
+        <h1>Guestbook</h1>
         <p>Hey {{ guest.first_name }}, just a couple more things..</p>
         <form action="" method="post" accept-charset="utf-8" enctype="multipart/form-data">
             {% csrf_token %}

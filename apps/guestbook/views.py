@@ -13,7 +13,7 @@ def guestbook(request):
     """
 
     context = dict()
-    context['entry_list'] = Entry.objects.all()
+    context['entry_list'] = Entry.objects.all().order_by('-created')
     form = context['form'] = EntryForm(request.POST or None)
     if form.is_valid():
         entry = form.save()

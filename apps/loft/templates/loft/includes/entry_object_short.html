@@ -1,0 +1,8 @@
+<div class="postContainer">
+    <h2><a href="{% url blog_entry_detail slug=object.slug %}">{{ object.title }}</a></h2>
+    <div class="post">
+        {{ object.lead_in }}
+    </div>
+    <p class="post-meta">{{ object.created|date:"jS F Y" }} &bull; {{ object.author }}</p>
+    <div class="clearingDiv"></div>
+</div>

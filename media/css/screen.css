@@ -1,49 +1,69 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
-
-/*#47840A*/
-
-body                            {padding: 20px;}
-#container                      {width: 960px; overflow: hidden; margin: 30px auto 0 auto;}
-#primary                        {width: 654px; float: left; padding: 0px;}
-#secondary                      {width: 304px; float: right;}
+/* Layout */
+body                            {padding: 20px; background: url('../img/test.png') right bottom no-repeat;}
+#container                      {width: 960px; overflow: hidden; margin: 30px auto 0 auto; min-height: 600px;}
+#primary                        {width: 600px; float: right; padding: 100px 0 0 40px;}
+#secondary                      {height: 615px; width: 320px; position: relative; float: left;}
+#secondary .size2               {position: absolute; bottom: 0;}
+#footer                         {width: 100%; text-align: center; margin-top: 30px; font-size: 11px; color: #AAAAAA;}
 
 /* Global Typography */
-body                            {font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif; color: #494945;}
+body                            {font: 15px/21px "Helvetica Neue", Helvetica, Arial, sans-serif; color:#494945;}
 a                               {text-decoration: none; color: #47840A;}
 a:hover                         {text-decoration: underline;}
-h1,h2,h3,h4,h5                  {color: #47840A; font-weight: normal;}
+h1,h2,h3,h4,h5                  {color: #47840A; font-weight: normal; font-family: "American Typewriter", monospace;}
+h1                              {font-size: 30px; line-height: 32px; margin-bottom: 28px;}
+h2                              {font-size: 20px; line-height: 22px; margin-bottom: 16px;}
+/*h3*/
+/*h4*/
+/*h5*/
+p                               {margin-bottom: 1em;}
 
 /* Logo */
-#logo                           {padding: 0 0 0 10px; height: 95px;}
+#logo                           {padding: 0; height: 100px;}
 #logo h1                        {font-family: "American Typewriter", monospace; font-size: 50px; line-height: 1em; margin: 0 0 -5px 0; font-weight: 500; color: #47840A;}
-#logo span                      {display: block; margin-bottom: 30px; font-size: 15px;/*font-style: italic;*/ color: #AAAAAA;}
+#logo span                      {display: block; margin-bottom: 20px; font-size: 14px; color: #AAAAAA;}
 
 /* Navigation */
-#nav                            {/*color: #47840A; */width: 274px; height: 281px; padding: 20px 0 10px 30px; display: block; /*background-color: #ddd;*/}
-#nav ul                         {margin: 0 0 1em 1em;}
-#nav li                         {margin: 0 0 1em 0;}
-#nav a                          {color: #47840A;}
-#nav span                       {background-color: #60b30e; color: #000000; padding: 3px 7px;
-                                    -webkit-border-radius: 6px;
-		                            background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #7ae311), color-stop(1.0, #60b30e)) !important;
-                                    text-shadow: rgba(255,255,255,.2) 0 1px 0;
-                                }
+#nav                            {padding: 0; display: block; font-size: 16px; line-height: 1em; font-family: "American Typewriter", monospace;}
+#nav ul                         {margin: 0;}
+#nav li                         {margin: 0 0 5px 0; display: block;}
+#nav a                          {display: block; padding: 4px 0 4px 8px;}
+#nav a#current                  {border-left: 3px solid #69c30f; color:#494945;}
+#nav span                       {display: block; padding: 4px 0 4px 8px; border-left: 3px solid #69c30f; margin: 0 auto;}
+
 /* Homepage */
-#home-news                      {padding: 0px 10px 20px 20px; height: 168px;}
-#home-news h2                   {border-top: 1px solid #DDDDDD; padding: 3px 0 10px 0px; text-transform: uppercase;}
+.home #primary                  {width: 640px; padding: 0;}
+#home-news                      {padding: 10px 10px 0 20px; width: 480px;}
+#home-news h2                   {padding: 3px 0 0 0px; text-transform: uppercase;}
 #home-news h3                   {font-weight: bold;}
-#home-news .meta                {color: #AAAAAA; font-size: 11px; line-height: 18px;}
+#home-news .meta                {color: #AAAAAA; font-size: 11px; line-height: 22px;}
+
+/* Guestbook */
+.guestbook-entry                {border-top: 1px solid #CCCCCC; padding-top: 1em;}
+.guestbook-entry .author        {text-align: right; color: #AAAAAA;}
+#guestbook-form, #rsvp-form     {margin: 40px 0 40px 30px;}
+#guestbook-form textarea        {width: 400px;}
+#rsvp-form textarea             {width: 200px;}
 
 /* Images */
-.photo                          {margin: 2px; background-color: #FFFFFF; border: 1px solid #CCCCCC; display: block;}
-.size1                          {height: 400px; width: 648px; margin-top: 0;}
-.size2                          {height: 198px; width: 320px;}
-.size3                          {height: 96px; width: 158px;}
+.photo                          {background-color: #FFFFFF; display: block; border: 1px solid #DDDDDD; padding: 3px;}
+.size1                          {height: 400px; width: 632px;}
+.size2                          {height: 200px; width: 313px;}
 .inline                         {float: left;}
+.right                          {margin-right: 0em;}
+
+/* News */
+.news h1                        {margin: 0;}
+.postContainer                  {border-bottom: 1px solid #CCCCCC; padding-top: 1.5em;}
+.postContainer:first-child      {padding-top: 0;}
+.post-meta                      {color: #999999;}
+.return-link                    {margin-bottom: 1em; display: block;}
 
 /* Forms */
 textarea                        {height: 100px;}
-.column                         {float: left; background-color: #DBE3F2; padding: 5px; margin-bottom: 7px; -webkit-border-radius: 6px; position: relative;}
+.column                         {float: left; background-color: #edf8ea; padding: 5px; margin-bottom: 7px; -webkit-border-radius: 6px; position: relative;}
 .column input[type='text']      {width: 200px;}
 .column input[type='radio']     {width: 20px;}
 .column ul                      {overflow: hidden;}

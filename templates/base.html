@@ -1,4 +1,4 @@
-{% load flatpages %}<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+{% load flatpages utils_tags %}<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
  
 <html lang="en"> 
 <head> 
@@ -14,7 +14,6 @@
 <link rel="shortcut icon" href="{{ MEDIA_URL }}img/favicon.ico" type="image/x-icon"> 
  
 <!-- CSS --> 
-<link rel="stylesheet" href="{{ MEDIA_URL }}css/reset.css" type="text/css"> 
 <link rel="stylesheet" href="{{ MEDIA_URL }}css/screen.css" type="text/css"> 
  
 <!-- Scripts --> 
@@ -26,12 +25,11 @@
 <title>{% block page_title %} &bull; Tim and Mai-Linh's Wedding{% endblock %}</title>
  
 </head> 
-<body> 
+<body class="{% block page_class %}home{% endblock %}">
 <!--[if IE]><p style="color: red; text-align: center; margin-top: 10px">You're using Internet Explorer. This website uses technologies that Internet Explorer does not support but pretty much every other browser does support. Do yourself and the Internet a favour and install a better browser.</p><![endif]--> 
 <div id="container"> 
     <div id="primary">
-        {% block primary %}
-        {% endblock %}
+        {% block primary %}{% endblock %}
     </div>
     <div id="secondary">
         <div id="logo">
@@ -39,26 +37,32 @@
             <span class="tagline">The wedding of Tim and Mai-Linh</span>
         </div>
         <ul id="nav">
-            {# <li>{% ifequal request.META.PATH_INFO '/' %}<span>Home</span>{% else %}<a href="{% url homepage %}">Home</a>{% endifequal %}</li> #}
-            {# {% get_flatpages '/info/' as info_pages %} #}
-            {# <ul> #}
-            {#     {% for info_page in info_pages %} #}
-            {#         <li> #}
-            {#             {% ifequal flatpage.url info_page.url %} #}
-            {#                 <span>{{ info_page.title }}</span> #}
-            {#             {% else %} #}
-            {#                 <a href="{{ info_page.url }}">{{ info_page.title }}</a> #}
-            {#             {% endifequal %} #}
-            {#         </li> #}
-            {#     {% endfor %} #}
-            {# </ul> #}
-            {# <li>{% ifequal request.META.PATH_INFO '/guests/register/' %}<span>RSVP</span>{% else %}<a href="{% url guests_register %}">RSVP</a>{% endifequal %}</li> #}
-            {# <li>{% ifequal request.META.PATH_INFO '/guestbook/' %}<span>Guestbook</span>{% else %}<a href="{% url guestbook_guestbook %}">Guestbook</a>{% endifequal %}</li> #}
-            {# <li>{% ifequal flatpage.url '/contact/' %}<span>Contact</span>{% else %}<a href="/contact/">Contact</a>{% endifequal %}</li> #}
+            <li>{% ifequal request.META.PATH_INFO '/' %}<span>Home</span>{% else %}<a href="{% url homepage %}">Home</a>{% endifequal %}</li>
+            {% get_flatpages '/info/' as info_pages %}
+            <ul>
+                <li><a {% active request "/news/" %}href="/news/">News</a></li>
+                {% for info_page in info_pages %}
+                    <li>
+                        {% ifequal flatpage.url info_page.url %}
+                            <span>{{ info_page.title }}</span>
+                        {% else %}
+                            <a href="{{ info_page.url }}">{{ info_page.title }}</a>
+                        {% endifequal %}
+                    </li>
+                {% endfor %}
+            </ul>
+            <li>{% ifequal request.META.PATH_INFO '/guests/register/' %}<span>RSVP</span>{% else %}<a href="{% url guests_register %}">RSVP</a>{% endifequal %}</li>
+            <li>{% ifequal request.META.PATH_INFO '/guestbook/' %}<span>Guestbook</span>{% else %}<a href="{% url guestbook_guestbook %}">Guestbook</a>{% endifequal %}</li>
+            <li>{% ifequal flatpage.url '/contact/' %}<span>Contact</span>{% else %}<a href="/contact/">Contact</a>{% endifequal %}</li>
         </ul>
-        {% block secondary %}{% endblock %}
+        {% block secondary %}
+            <img class="photo size2 inline" src="{{MEDIA_URL}}img/random/tim-mai-linh-{% random_number %}.jpg" />
+        {% endblock %}
     </div>
     <div class="clearingDiv"></div> 
-</div> 
+</div>
+<div id="footer">
+    {% block footer %}A maitim production{% endblock %}
+</div>
 </body> 
 </html>

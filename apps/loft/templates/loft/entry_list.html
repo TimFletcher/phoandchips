@@ -1,0 +1,12 @@
+{% extends 'loft/base.html' %}
+
+{% block page_class %}news{% endblock %}
+
+{% block primary %}
+    <h1>News</h1>
+    {% for object in object_list %}
+        {% include "loft/includes/entry_object_short.html" %}
+    {% empty %}
+        <p>There are no entries at the moment. Go <a href="/admin/">add</a> one.</p>
+    {% endfor %}
+{% endblock %}

@@ -2,6 +2,8 @@
 
 {% load markup %}
 
+{% block page_class %}{% endblock %}
+
 {% block primary %}
     <h1>{{ flatpage.title }}</h1>
     {{ flatpage.content|textile }}

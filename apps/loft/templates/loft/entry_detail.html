@@ -1,0 +1,20 @@
+{% extends 'loft/base.html' %}
+
+{% block title_meta %}Tim Fletcher {% if object.page_title %} | {{ object.page_title }}{% else %} | {{ object.title }}{% endif %}{% endblock %}
+
+{% block seo %}
+    <meta name="keywords" content="{{ object.meta_keywords }}">
+    <meta name="description" content="{{ object.meta_description }}">
+    {{ object.generic_meta_tags }}
+{% endblock %}
+
+{% block page_class %}{% endblock %}
+
+{% block title %}{% if object.page_title %} | {{ object.page_title }}{% else %} | {{ object.title }}{% endif %}{% endblock title %}
+
+{% block primary %}
+    <a class="return-link" href="{% url home_index %}">&laquo; back to all news</a>
+    {% include "loft/includes/entry_object_full.html" %}
+{% endblock %}
+
+{% block secondary %}{% endblock %}

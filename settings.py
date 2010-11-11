@@ -65,8 +65,11 @@ SECRET_KEY = '1_5c6b*)^i@35^@wi$6#_i1((0hd&%tczi^)&8kt-7&zzi4)t2'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader'
+    'django.template.loaders.app_directories.Loader',
+    'django.template.loaders.filesystem.Loader'
+)
+TEMPLATE_DIRS = (
+    os.path.join(PROJECT_ROOT, 'templates')
 )
 
 MIDDLEWARE_CLASSES = [
@@ -80,14 +83,10 @@ MIDDLEWARE_CLASSES = [
 
 ROOT_URLCONF = 'urls'
 
-TEMPLATE_DIRS = (
-    os.path.join(PROJECT_ROOT, 'templates')
-)
-
-INVITE_CODES = {
+INVITE_CODES = { # FIXME Change these in production
     'ceremony': 'ceremony',
     'reception': 'reception'
-} #FIXME Change these in production
+}
 
 AUTH_PROFILE_MODULE = 'guests.Attendee'
 
@@ -108,5 +107,7 @@ INSTALLED_APPS = [
     'django.contrib.markup',
     'form_helpers',
     'guests',
-    'guestbook'
+    'guestbook',
+    'loft',
+    'utils'
 ]
