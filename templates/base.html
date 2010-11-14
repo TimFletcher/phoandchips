@@ -16,13 +16,21 @@
 <!-- CSS --> 
 <link rel="stylesheet" href="{{ MEDIA_URL }}css/screen.css" type="text/css"> 
  
-<!-- Scripts --> 
-{# <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script> #}
+<!-- Scripts -->
+{% if debug %}
+    <script type="text/javascript" charset="utf-8" src="{{ MEDIA_URL }}js/jquery-1.4.2.min.js"></script>
+    {# Put in local fonts here?? #}
+{% else %}
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+{% endif %}
+<script type="text/javascript" src="http://use.typekit.com/drc7uiw.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
 
 {% block extra_js %}{% endblock %}
  
 <!-- Page Title --> 
-<title>{% block page_title %} &bull; Tim and Mai-Linh's Wedding{% endblock %}</title>
+<title>{% block page_title %}East Meets West{% endblock %}</title>
  
 </head> 
 <body class="{% block page_class %}home{% endblock %}">
@@ -33,8 +41,8 @@
     </div>
     <div id="secondary">
         <div id="logo">
-            <h1>Pho &amp; Chips</h1>
-            <span class="tagline">The wedding of Tim and Mai-Linh</span>
+            <h1>East meets West</h1>
+            <span class="tagline">Tim and Mai-Linh get it on</span>
         </div>
         <ul id="nav">
             <li>{% ifequal request.META.PATH_INFO '/' %}<span>Home</span>{% else %}<a href="{% url homepage %}">Home</a>{% endifequal %}</li>
@@ -59,10 +67,9 @@
             <img class="photo size2 inline" src="{{MEDIA_URL}}img/random/tim-mai-linh-{% random_number %}.jpg" />
         {% endblock %}
     </div>
-    <div class="clearingDiv"></div> 
 </div>
 <div id="footer">
-    {% block footer %}A maitim production{% endblock %}
+    <span>{% block footer %}A maitim production{% endblock %}</span>
 </div>
 </body> 
 </html>

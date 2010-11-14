@@ -2,8 +2,40 @@
 
 {% load blog_tags %}
 
+{% block extra_js %}
+    <script type="text/javascript" charset="utf-8" src="{{ MEDIA_URL }}js/jquery.nivo.slider.pack.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(window).load(function() {
+            $('#slideshow').nivoSlider({
+                effect:'sliceDown', //Specify sets like: 'fold,fade,sliceDown'
+                slices:15,
+                animSpeed:800, //Slide transition speed
+                pauseTime:5000,
+                startSlide:0, //Set starting Slide (0 index)
+                directionNav:false, //Next & Prev
+                controlNav:false, //1,2,3...
+                controlNavThumbs:false, //Use thumbnails for Control Nav
+                controlNavThumbsFromRel:false, //Use image rel for thumbs
+                controlNavThumbsSearch: '.jpg', //Replace this with...
+                controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
+                keyboardNav:true, //Use left & right arrows
+                pauseOnHover:true, //Stop animation while hovering
+                manualAdvance:false, //Force manual transitions
+                captionOpacity:0.8 //Universal caption opacity
+            });
+        });
+    </script>
+{% endblock %}
+
 {% block primary %}
-    <img class="photo size1" src="{{MEDIA_URL}}img/tim-mai-linh-67.jpg" />
+    <div id="slideshow-wrapper">
+        <div id="slideshow">
+            <img class="photo size1" src="{{MEDIA_URL}}img/homepage/tim-mai-linh-01.jpg" />
+            <img class="photo size1" src="{{MEDIA_URL}}img/homepage/tim-mai-linh-02.jpg" />
+            <img class="photo size1" src="{{MEDIA_URL}}img/homepage/tim-mai-linh-03.jpg" />
+            <img class="photo size1" src="{{MEDIA_URL}}img/homepage/tim-mai-linh-04.jpg" />
+        </div>
+    </div>
     {% get_latest_entries 1 as articles %}
     {% for article in articles %}
         <div id="home-news">
@@ -13,8 +45,4 @@
             {{ article.lead_in }}
         </div>
     {% endfor %}
-{% endblock %}
-
-{% block secondary %}
-    <img class="photo size2 inline" src="{{MEDIA_URL}}img/tim-mai-linh-67.jpg" />
 {% endblock %}

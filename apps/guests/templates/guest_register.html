@@ -2,12 +2,13 @@
 
 {% load form_helpers %}
 
+{% block page_title %}{{ block.super }} &bull; RSVP{% endblock %}
+
 {% block page_class %}{% endblock %}
 
 {% block primary %}
-
-{% block content %}
     <h1>RSVP</h1>
+    <p>In order to help us organise a great wedding ceremony and reception for everyone, we'd appreciate it if you'd take a minute to RSVP using this form.</p>
     <form id="rsvp-form" action="" method="post" accept-charset="utf-8" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="section">
@@ -42,40 +43,6 @@
                 {{ form.invite_code.errors }}
             </div>
         </div>
-
-        {# <div class="section"> #}
-        {#     <p class="section-label">Phone</p> #}
-        {#     <div class="column phone"> #}
-        {#         {{ form.phone_type|render_field }} #}
-        {#         <img src="{{ MEDIA_URL }}img/add.png" width="28" height="28"> #}
-        {#         {{ form.cell_phone|render_field }} #}
-        {#     </div> #}
-        {# </div> #}
-        {# <div class="section"> #}
-        {#     <p class="section-label">Email</p> #}
-        {#     <div class="full-column{% if form.email.errors %} error{% endif %}"> #}
-        {#         {{ form.email|render_field }} #}
-        {#     </div> #}
-        {# </div> #}
-        {# <div class="section"> #}
-        {#     <div class="column column-select{% if form.country.errors %} error{% endif %}"> #}
-        {#         {{ form.country|render_field }} #}
-        {#     </div> #}
-        {# </div> #}
-        {# <div class="section"> #}
-        {#     <p class="section-label">Profile Picture</p> #}
-        {#     <div class="column-file{% if form.profile_picture.errors %} error{% endif %}"> #}
-        {#         {{ form.profile_picture|render_field }} #}
-        {#     </div> #}
-        {# </div> #}
-        {# <div class="section"> #}
-        {#     <p class="section-label">Song</p> #}
-        {#     <div class="column-file{% if form.song.errors %} error{% endif %}"> #}
-        {#         {{ form.song|render_field }} #}
-        {#     </div> #}
-        {# </div> #}
         <button name="submit" id="submit" class="button" type="submit" value="Submit">Submit</button>
-    </form> 
-{% endblock %}
-
+    </form>
 {% endblock %}

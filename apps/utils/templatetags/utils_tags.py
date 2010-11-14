@@ -12,4 +12,4 @@ def active(request, pattern):
 @register.simple_tag
 def random_number():
     import random
-    return "%02d" % random.randint(1,10)
+    return "%03d" % random.randint(1,5)
