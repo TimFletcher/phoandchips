@@ -3,7 +3,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 /* Layout */
 body                            {}
 #container                      {width: 960px; overflow: hidden; margin: 30px auto 0 auto; padding-bottom: 20px; background: url('../img/Slice-1.png') bottom 730px no-repeat;}
-#primary                        {width: 600px; float: right; padding: 100px 0 0 40px;}
+#primary                        {width: 600px; float: right; padding: 0 0 0 40px;}
 #secondary                      {height: 615px; width: 320px; position: relative; float: left; background: url('../img/Slice-2.png') 200px 260px no-repeat;}
 #secondary .size2               {position: absolute; bottom: 0;}
 #footer                         {width: 960px; text-align: center; font-size: 11px; color: #AAAAAA; background-color: #f2fbf4; border-top: 1px solid #ECF3EC; border-bottom: 1px solid #ECF3EC; clear: both; overflow: hidden; margin: 0 auto;}
@@ -13,8 +13,9 @@ body                            {}
 body                            {font: 15px/21px "Helvetica Neue", Helvetica, Arial, sans-serif; color:#494945;}
 a                               {text-decoration: none; color: #47840A;}
 a:hover                         {text-decoration: underline;}
-h1,h2,h3,h4,h5                  {color: #47840A; font-weight: normal;}
-h1                              {font-size: 30px; line-height: 32px; margin-bottom: 28px;}
+h1,h2,h3,h4,h5                  {color: #c8e0cf; font-weight: normal;}
+/*h1                              {font-size: 30px; line-height: 32px; margin-bottom: 28px;}*/
+h1                              {font-size: 43px; line-height: 1em; margin-bottom: 28px;}
 h2                              {font-size: 20px; line-height: 22px; margin-bottom: 16px;}
 /*h3*/
 /*h4*/
@@ -23,7 +24,7 @@ p                               {margin-bottom: 1em;}
 
 /* Logo */
 #logo                           {padding: 0; height: 100px;}
-#logo h1                        {font-size: 43px; line-height: 1em; margin: 0 0 -5px 0; font-weight: 500; color: #47840A;}
+#logo p                         {font-size: 43px; line-height: 1em; margin: 0; font-weight: 500; color: #47840A;}
 #logo span                      {display: block; margin: 1px 25px 20px 0; font-size: 14px; color: #AAAAAA; text-align: right; font-style: italic; font-family: serif}
 
 /* Navigation */
@@ -73,7 +74,7 @@ p                               {margin-bottom: 1em;}
 
 /* Forms */
 textarea                        {height: 100px; display: block;}
-.column                         {float: left; background-color: #E2F4DD; padding: 5px; margin-bottom: 7px; position: relative;
+.column                         {float: left; background-color: #c8e0cf; padding: 5px; margin-bottom: 7px; position: relative;
                                 -webkit-border-radius: 6px;}
 .column input[type='text']      {width: 200px;}
 .column input[type='radio']     {width: 20px;}
@@ -92,7 +93,7 @@ label                           {display: inline-block; width: 100px; float: lef
 .align-right                    {float: right;}
 .section                        {margin-bottom: 5px; overflow: hidden;}
 .section-label                  {clear: both; padding: 0 0 3px 5px;}
-#submit                         {background-color: #E2F4DD; border: none; text-transform: uppercase; font-size: 12px; font-weight: bold; padding: 8px 11px; margin-left: 135px; cursor: pointer;
+#submit                         {background-color: #c8e0cf; border: none; text-transform: uppercase; font-size: 12px; font-weight: bold; padding: 8px 11px; margin-left: 135px; cursor: pointer;
                                 -webkit-border-radius: 3px;}
 .error                          {background-color: #FCC;}
 .errorlist                      {font-size: 12px; margin-top: 4px; font-weight: bold;}
