@@ -4,11 +4,13 @@
 
 {% block page_title %}{{ block.super }} &bull; {{ flatpage.title }}{% endblock %}
 
-
-
 {% block page_class %}{% endblock %}
 
 {% block primary %}
     <h1>{{ flatpage.title }}</h1>
-    {{ flatpage.content|textile }}
+    {% if flatpage.title != 'Contact' %}
+        {{ flatpage.content|textile }}
+    {% else %}
+        {{ flatpage.content }}
+    {% endif %}
 {% endblock %}

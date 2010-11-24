@@ -6,26 +6,33 @@ body                            {}
 #primary                        {width: 600px; float: right; padding: 0 0 0 40px;}
 #secondary                      {height: 615px; width: 320px; position: relative; float: left; background: url('../img/Slice-2.png') 200px 260px no-repeat;}
 #secondary .size2               {position: absolute; bottom: 0;}
-#footer                         {width: 960px; text-align: center; font-size: 11px; color: #AAAAAA; background-color: #f2fbf4; border-top: 1px solid #ECF3EC; border-bottom: 1px solid #ECF3EC; clear: both; overflow: hidden; margin: 0 auto;}
+#footer                         {width: 960px; text-align: center; font-size: 11px; color: #AAAAAA; background-color: #f1fde0; border-top: 1px solid #ECF3EC; border-bottom: 1px solid #ECF3EC; clear: both; overflow: hidden; margin: 0 auto;}
 #footer span                    {padding: 10px 0 10px 0; display: block;}
 
 /* Global Typography */
-body                            {font: 15px/21px "Helvetica Neue", Helvetica, Arial, sans-serif; color:#494945;}
+body                            {font: 14px/21px "Helvetica Neue", Helvetica, Arial, sans-serif; color:#494945;}
+/*body                            {font-size: 12px; line-height: 18px; color: #555555;}*/
+
 a                               {text-decoration: none; color: #47840A;}
 a:hover                         {text-decoration: underline;}
-h1,h2,h3,h4,h5                  {color: #c8e0cf; font-weight: normal;}
-/*h1                              {font-size: 30px; line-height: 32px; margin-bottom: 28px;}*/
-h1                              {font-size: 43px; line-height: 1em; margin-bottom: 28px;}
-h2                              {font-size: 20px; line-height: 22px; margin-bottom: 16px;}
-/*h3*/
-/*h4*/
-/*h5*/
-p                               {margin-bottom: 1em;}
+h1,h2,h3,h4,h5                  {color: #47840a; font-weight: normal;}
+h1                              {font-size: 42px; line-height: 42px; margin-bottom: 21px;}
+h2                              {font-size: 21px; line-height: 21px; margin-bottom: 21px;}
+h3                              {font-size: 18px; line-height: 21px; margin-bottom: 21px;}
+h4                              {font-size: 14px; line-height: 21px; font-weight: bold;}
+p                               {margin-bottom: 21px;}
+ul,ol                           {margin-bottom: 21px; margin-left: 42px;}
+ul li                           {list-style: disc outside;}
+ol li                           {list-style: decimal outside;}
+
+
+
+
+
 
 /* Logo */
-#logo                           {padding: 0; height: 100px;}
-#logo p                         {font-size: 43px; line-height: 1em; margin: 0; font-weight: 500; color: #47840A;}
-#logo span                      {display: block; margin: 1px 25px 20px 0; font-size: 14px; color: #AAAAAA; text-align: right; font-style: italic; font-family: serif}
+#logo                           {display: block; width: 296px; height: 47px; background: url(../img/logo.png) 0 0 no-repeat; text-indent: -9999em; margin-bottom: 23px;}
+span#tagline                    {display: block; margin: 1px 25px 20px 0; font-size: 14px; color: #AAAAAA; text-align: right; font-style: italic; font-family: serif}
 
 /* Navigation */
 #nav                            {padding: 0; display: block; font-size: 18px; line-height: 1em;}

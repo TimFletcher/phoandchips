@@ -7,10 +7,10 @@
     <script type="text/javascript" charset="utf-8">
         $(window).load(function() {
             $('#slideshow').nivoSlider({
-                effect:'sliceDown', //Specify sets like: 'fold,fade,sliceDown'
+                effect:'fade', //Specify sets like: 'fold,fade,sliceDown'
                 slices:15,
                 animSpeed:800, //Slide transition speed
-                pauseTime:5000,
+                pauseTime:4000,
                 startSlide:0, //Set starting Slide (0 index)
                 directionNav:false, //Next & Prev
                 controlNav:false, //1,2,3...
@@ -19,7 +19,7 @@
                 controlNavThumbsSearch: '.jpg', //Replace this with...
                 controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
                 keyboardNav:true, //Use left & right arrows
-                pauseOnHover:true, //Stop animation while hovering
+                pauseOnHover:false, //Stop animation while hovering
                 manualAdvance:false, //Force manual transitions
                 captionOpacity:0.8 //Universal caption opacity
             });

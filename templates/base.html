@@ -40,10 +40,7 @@
         {% block primary %}{% endblock %}
     </div>
     <div id="secondary">
-        <div id="logo">
-            <p>East meets West</p>
-            <span class="tagline">Tim and Mai-Linh get it on</span>
-        </div>
+        <a id="logo" href="/">Tim and Mai-Linh get it on</a>
         <ul id="nav">
             <li>{% ifequal request.META.PATH_INFO '/' %}<span>Home</span>{% else %}<a href="{% url homepage %}">Home</a>{% endifequal %}</li>
             {% get_flatpages '/info/' as info_pages %}
@@ -69,7 +66,7 @@
     </div>
 </div>
 <div id="footer">
-    <span>{% block footer %}A maitim production{% endblock %}</span>
+    <span>{% block footer %}A MaiTim production &bull; Photos by <a href="http://photo.elidupuis.com/">Eli Dupuis</a>{% endblock %}</span>
 </div>
 </body> 
 </html>
