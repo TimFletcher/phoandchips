@@ -1,3 +1,5 @@
-django==1.2.1
+git+git://github.com/django/django.git
 textile
 git+http://github.com/robhudson/django-debug-toolbar.git
+git+git://github.com/kylefox/django-form-helpers.git
+markdown
