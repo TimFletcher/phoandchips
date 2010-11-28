@@ -83,9 +83,9 @@ MIDDLEWARE_CLASSES = [
 
 ROOT_URLCONF = 'urls'
 
-INVITE_CODES = { # FIXME Change these in production
-    'ceremony': 'ceremony',
-    'reception': 'reception'
+INVITE_CODES = {
+    'ceremony':  'tim&mailinh2011June25',
+    'reception': '2011June25tim&mailinh'
 }
 
 AUTH_PROFILE_MODULE = 'guests.Attendee'
