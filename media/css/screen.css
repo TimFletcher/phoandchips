@@ -25,11 +25,6 @@ ul,ol                           {margin-bottom: 21px; margin-left: 42px;}
 ul li                           {list-style: disc outside;}
 ol li                           {list-style: decimal outside;}
 
-
-
-
-
-
 /* Logo */
 #logo                           {display: block; width: 296px; height: 47px; background: url(../img/logo.png) 0 0 no-repeat; text-indent: -9999em; margin-bottom: 23px;}
 span#tagline                    {display: block; margin: 1px 25px 20px 0; font-size: 14px; color: #AAAAAA; text-align: right; font-style: italic; font-family: serif}
@@ -58,6 +53,7 @@ span#tagline                    {display: block; margin: 1px 25px 20px 0; font-s
 .nivoSlider img                 {position:absolute; top:0px; left:0px; display: none;}
 .nivo-slice                     {display:block; position:absolute; z-index:50; height:100%;}
 .clear                          {clear:both;}
+
 /* Guestbook */
 .guestbook-entry                {border-top: 1px solid #CCCCCC; padding-top: 1em;}
 .guestbook-entry .author        {text-align: right; color: #AAAAAA;}
@@ -71,6 +67,8 @@ span#tagline                    {display: block; margin: 1px 25px 20px 0; font-s
 .size2                          {height: 200px; width: 313px; display: block; border: 1px solid #DDDDDD; padding: 3px;}
 .inline                         {float: left;}
 .right                          {margin-right: 0em;}
+.inline-image                   {border: 1px solid #CCCCCC; padding: 3px; margin: 0 auto; display: block;}
+.credit                         {font-size: 12px; text-align: center; display: block;}
 
 /* News */
 .news h1                        {margin: 0;}
