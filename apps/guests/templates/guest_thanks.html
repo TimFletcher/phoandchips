@@ -5,10 +5,11 @@
 {% block page_class %}{% endblock %}
 
 {% block primary %}
+    <h1>Guestbook</h1>
     {% if not guest.attending_ceremony and not guest.attending_reception %}
-          <p>Sorry to hear you're not able to attend. We understand completely!</p>
+          <p>Your RSVP was successfully received. Sorry to hear you're not able to attend. We understand completely!</p>
           <p>We'd really like it if you could sign our guest book though. Please!</p>
     {% else %}
-          <p>Great! We can't wait to see you there!</p>
+          <p>Your RSVP was successfully received. We can't wait to see you there!</p>
     {% endif %}
 {% endblock %}

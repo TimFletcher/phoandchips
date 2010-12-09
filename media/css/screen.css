@@ -83,8 +83,8 @@ textarea                        {height: 100px; display: block;}
                                 -webkit-border-radius: 6px;}
 .column input[type='text']      {width: 200px;}
 .column input[type='radio']     {width: 20px;}
-.column ul                      {overflow: hidden;}
-.column li                      {width: 70px; float: left; padding: 3px 0;}
+.column ul                      {overflow: hidden; margin: 0; padding: 0;}
+.column li                      {width: 70px; float: left; padding: 3px 0; list-style-type: none;}
 .column li label                {width: 50px; padding: 0;}
 .column li:first-child          {padding-right: 30px;}
 label                           {display: inline-block; width: 100px; float: left; text-align: right; padding: 9px 30px 0 0; font-weight: bold; clear: left;}
@@ -98,14 +98,19 @@ label                           {display: inline-block; width: 100px; float: lef
 .align-right                    {float: right;}
 .section                        {margin-bottom: 5px; overflow: hidden;}
 .section-label                  {clear: both; padding: 0 0 3px 5px;}
-#submit                         {background-color: #c8e0cf; border: none; text-transform: uppercase; font-size: 12px; font-weight: bold; padding: 8px 11px; margin-left: 135px; cursor: pointer;
+#submit                         {background-color: #c8e0cf; border: none; text-transform: uppercase; font-size: 12px; font-weight: bold; padding: 8px 11px; margin-left: 130px; cursor: pointer;
                                 -webkit-border-radius: 3px;}
 .error                          {background-color: #FCC;}
-.errorlist                      {font-size: 12px; margin-top: 4px; font-weight: bold;}
-.errorlist li                   {width: 100%;}
+.errorlist                      {font-size: 12px; margin: 4px 0 0 0; font-weight: bold; }
+.errorlist li                   {width: 100%; margin: 0; padding: 0;}
 input,
 textarea,
 .input textarea,
 input.fakeinput                 {z-index: 0; padding: 4px 9px 5px 4px; margin: 0; font: inherit; border: 1px solid #ABB5CD;
                                 -webkit-border-radius: 3px;}
 .input span                     {position: absolute; padding: 7px; margin-left: 0px; color: #999; z-index: 1; cursor: text;}
+
+/* Misc */
+
+.messages                       {margin: 0; padding: 0;}
+.messages li                    {list-style-type: none; padding: 10px; background-color: #F1FDE0; margin-bottom: 1em;}

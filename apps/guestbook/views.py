@@ -18,7 +18,7 @@ def guestbook(request):
     if form.is_valid():
         entry = form.save()
         messages.success(request, 'Thanks %s, your message was successfully added!' % entry.author)
-        return HttpResponseRedirect(reverse('guestbook_guestbook_guestbook'))
+        return HttpResponseRedirect(reverse('guestbook_guestbook'))
 
     return render_to_response(
         'guestbook.html',

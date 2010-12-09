@@ -9,7 +9,7 @@ class Entry(models.Model):
 
     # Meta
     created = models.DateTimeField(auto_now_add=True)
-    invite_code = models.CharField(max_length=20, help_text="Just checking you're allowed!")
+    invite_code = models.CharField(max_length=25, help_text="Just checking you're allowed!")
     
     class Meta:
         ordering = ['created']

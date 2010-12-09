@@ -23,7 +23,7 @@ class Guest(models.Model):
     phone_type  = models.CharField(blank=True, max_length=80, choices=NUMBER_TYPES, default=NUMBER_TYPES[0])
     email       = models.EmailField(blank=True)
     address     = models.TextField(blank=True, help_text="So we can say thanks!")
-    invite_code = models.CharField(max_length=20)
+    invite_code = models.CharField(max_length=25)
 
     # Step 2
     attending_ceremony  = models.IntegerField('Ceremony', choices=ATTENDANCE_CHOICES, null=True)

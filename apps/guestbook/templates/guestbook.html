@@ -27,7 +27,9 @@
         </div>
         <button name="submit" id="submit" class="button" type="submit" value="Submit">Submit</button>
     </form>
-
+    <ul class="messages"> 
+        <li>Thanks Tim, your message was successfully added!</li> 
+    </ul>
     {% if messages %}
         <ul class="messages">
             {% for message in messages %}
@@ -43,7 +45,6 @@
             </div>
         {% empty %}
             <p>No entries just yet!</p>
-
         {% endfor %}
     {% endblock %}
 {% endblock %}
