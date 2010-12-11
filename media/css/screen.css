@@ -46,7 +46,7 @@ span#tagline                    {display: block; margin: 1px 25px 20px 0; font-s
 #home-news .meta                {color: #AAAAAA; font-size: 11px; line-height: 22px;}
 
 #slideshow-wrapper              {padding: 3px; border: 1px solid #DDDDDD;}
-#slideshow                      {}
+#slideshow                      {display: none;}
 
 /* The Nivo Slider styles */
 .nivoSlider                     {position:relative;}
