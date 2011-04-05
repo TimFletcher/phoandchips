@@ -85,7 +85,7 @@ ROOT_URLCONF = 'urls'
 
 INVITE_CODES = {
     'ceremony':  'tim&mailinh2011June25',
-    'reception': '2011June25tim&mailinh'
+    'reception': '2011June25mailinh&tim'
 }
 
 AUTH_PROFILE_MODULE = 'guests.Attendee'

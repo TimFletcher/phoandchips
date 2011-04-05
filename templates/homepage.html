@@ -40,7 +40,7 @@
     {% for article in articles %}
         <div id="home-news">
             <h2><a href="{% url home_index %}">Latest News</a></h2>
-            <h3><a href="#">{{ article.title }}</a></h3>
+            <h3><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h3>
             <span class="meta">{{ article.created|date:"jS F Y" }}</span>
             {{ article.lead_in }}
         </div>

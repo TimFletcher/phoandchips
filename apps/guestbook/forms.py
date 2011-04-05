@@ -10,7 +10,7 @@ class EntryForm(forms.ModelForm):
         model = Entry
 
     def clean_invite_code(self):
-        code = self.cleaned_data['invite_code']        
+        code = self.cleaned_data['invite_code']
         if not code in INVITE_CODES.values():
             raise forms.ValidationError('Invite code not valid.')
         return code

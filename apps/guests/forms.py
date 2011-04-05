@@ -16,7 +16,7 @@ class GuestForm(forms.ModelForm):
         ]
 
     def clean_invite_code(self):
-        code = self.cleaned_data['invite_code']        
+        code = self.cleaned_data['invite_code']
         if not code in INVITE_CODES.values():
             raise forms.ValidationError('Invite code not valid.')
         return code
@@ -61,11 +61,8 @@ def get_rsvp_form(field_list, *args, **kwargs):
             attending_reception = cleaned_data.get('attending_reception', False)
             number_of_adults = cleaned_data.get('number_of_adults')
             if not number_of_adults:
-                if attending_reception:
-                    self._errors["number_of_adults"] = self.error_class(["Please specify how many adults will be attending"])
-                if attending_ceremony:
-                    self._errors["number_of_adults"] = self.error_class(["Please specify how many adults will be attending"])            
-            del cleaned_data["number_of_adults"]
+                self._errors["number_of_adults"] = self.error_class(["Please specify how many adults will be attending"])            
+            # del cleaned_data["number_of_adults"]
             return cleaned_data
  
     return RSVPForm
